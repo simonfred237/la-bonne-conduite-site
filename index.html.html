@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Bonne Conduite - Site Officiel</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header>
+        <div class="logo">La Bonne Conduite</div>
+        <nav>
+            <a href="#home-section" class="active">Accueil</a>
+            <a href="#about-section">À Propos</a>
+            <a href="#services-section">Nos Services</a>
+            <a href="#partners-section">Nos Partenaires</a>
+            <a href="#contact-section">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home-section" class="hero animate-on-load">
+            <h1>Votre permis de conduire, notre mission !</h1>
+            <p>Obtenez votre liberté au volant avec des formations personnalisées et un taux de réussite exceptionnel.</p>
+            <a href="#services-section" class="cta-button">Découvrez nos Formules Permis</a>
+        </section>
+
+        <section class="advantages animate-on-scroll">
+            <h2>Pourquoi nous choisir ?</h2>
+            <div class="advantages-grid">
+                <div>Prix Choc : **1000€**</div>
+                <div>Suivi Personnalisé</div>
+                <div>Procédures Accélérées</div>
+            </div>
+        </section>
+
+        <section id="about-section" class="content-block content-section animate-on-scroll" style="background-color: white;">
+            <h2>À Propos de Nous</h2>
+            <p>Fondée sur la passion de la sécurité routière et de la bonne conduite, La Bonne Conduite s'engage à offrir une formation de qualité supérieure.</p>
+            <p>Notre équipe d'instructeurs expérimentés est là pour vous accompagner pas à pas vers la réussite de votre permis A, B, C, et même pour vos démarches administratives.</p>
+        </section>
+
+        <section class="content-block content-section animate-on-scroll">
+            <h2>Nos Valeurs</h2>
+            <div class="values-list">
+                <div>Éthique</div>
+                <div>Pédagogie</div>
+                <div>Réussite</div>
+            </div>
+        </section>
+
+
+        <section id="services-section" class="services-list content-section animate-on-scroll" style="background-color: white;">
+            <h2>Nos Services Clés</h2>
+            <div class="services-grid">
+                
+                <div class="service-option" data-service="Code de la Route (Rapide)"><h3>Code de la Route</h3><p>Obtention de votre code en **78h** grâce à nos méthodes accélérées, en partenariat avec La Poste / ObjectifCode.</p></div>
+                <div class="service-option" data-service="Carte VTC Professionnelle"><h3>Carte VTC</h3><p>Formation et assistance complètes pour l'obtention de votre carte professionnelle VTC.</p></div>
+                <div class="service-option" data-service="Permis Transport (Cat. D)"><h3>Permis Transport (D)</h3><p>Accompagnement pour l'obtention du permis de transport en commun de personnes.</p></div>
+                <div class="service-option" data-service="Permis AM (Cyclomoteur)"><h3>Permis AM (BSR)</h3><p>Formation pour les cyclomoteurs et voiturettes dès 14 ans.</p></div>
+                <div class="service-option" data-service="Permis Bateau"><h3>Permis Bateau</h3><p>Formez-vous pour naviguer en toute légalité et sécurité sur les eaux intérieures et côtières.</p></div>
+                <div class="service-option" data-service="Permis A (Moto)"><h3>Permis A (Moto)</h3><p>Formation complète et sécuritaire pour l'obtention de votre permis deux-roues.</p></div>
+                <div class="service-option" data-service="Permis B (Voiture)"><h3>Permis B (Voiture)</h3><p>Forfait tout compris Permis B + Code pour **1000€** (selon conditions).</p></div>
+                <div class="service-option" data-service="Permis C (Poids Lourds)"><h3>Permis C (Poids Lourds)</h3><p>Formation professionnelle pour le transport de marchandises.</p></div>
+                <div class="service-option" data-service="Titre de Séjour"><h3>Titre de Séjour / CNI</h3><p>Assistance administrative pour vos démarches de Titre de Séjour et de Carte Nationale d'Identité (CNI).</p></div>
+                <div class="service-option" data-service="Accélération Procédure Permis"><h3>Accélération Procédure</h3><p>Optimisation rapide des délais d'inscription à l'examen du permis.</p></div>
+            </div>
+        </section>
+
+        <section class="request-form-section animate-on-scroll">
+            <h2>Demande de Renseignement</h2>
+            <p>Sélectionnez un service ci-dessus pour pré-remplir le formulaire, ou remplissez-le directement :</p>
+            
+            <form id="serviceForm" action="https://formspree.io/f/xzznvzyr" method="POST">
+                
+                <input type="hidden" id="serviceTypeHidden" name="Service_Demandé" value="">
+                
+                <div class="form-group">
+                    <label for="serviceTypeDisplay">Service demandée :</label>
+                    <input type="text" id="serviceTypeDisplay" name="serviceTypeDisplay" readonly required placeholder="Sélectionnez un service ci-dessus"> 
+                </div>
+                
+                <div class="form-group">
+                    <label for="fullName">Nom complet :</label>
+                    <input type="text" id="fullName" name="Nom_Complet" required placeholder="Votre Nom et Prénom">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Numéro de téléphone :</label>
+                    <input type="tel" id="phone" name="Numéro_Téléphone" required placeholder="Ex: 237 676XXXXXX">
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Adresse complète :</label>
+                    <input type="text" id="address" name="Adresse" required placeholder="Rue, Ville, Code Postal">
+                </div>
+                <div class="form-group">
+                    <label for="adress">Adresse Gmail :</label>
+                    <input type="text" id="adress" name="adresse" required placeholder="bonneconduite@gamil.com">
+                </div>
+                
+                <button type="submit" id="submitServiceBtn">Envoyer ma Demande</button>
+                <p id="formMessage" class="message"></p>
+            </form>
+        </section>
+
+
+        <section id="partners-section" class="content-block content-section animate-on-scroll">
+            <h2>Nos Partenaires de Confiance</h2>
+            <p>Grâce à nos collaborations, nous vous assurons une démarche rapide et conforme aux exigences administratives.</p>
+            
+            <div class="partners-carousel-container">
+                <div class="partners-carousel">
+                    <img src="misterelogo.png" alt="Ministère de l'Intérieur" class="partner-logo-img">
+                    <img src="antslogo.png" alt="ANTS - France Titres" class="partner-logo-img">
+                    <img src="logo la poste.jpg" alt="La Poste" class="partner-logo-img">
+                    <img src="objectiflogo.jpg" alt="Objectif Code" class="partner-logo-img">
+                    <img src="logoecl.jpg" alt="ECL - European Consortium" class="partner-logo-img">
+                    
+                    <img src="misterelogo.png" alt="Ministère de l'Intérieur" class="partner-logo-img">
+                    <img src="antslogo.png" alt="ANTS - France Titres" class="partner-logo-img">
+                    <img src="logo la poste.jpg" alt="La Poste" class="partner-logo-img">
+                    <img src="objectiflogo.jpg" alt="Objectif Code" class="partner-logo-img">
+                    <img src="logoecl.jpg" alt="ECL - European Consortium" class="partner-logo-img">
+                </div>
+            </div>
+        </section>
+
+
+        <section id="contact-section" class="contact-info content-section animate-on-scroll">
+            <h2>Contactez La Bonne Conduite</h2>
+            <p>Nous sommes disponibles pour répondre à toutes vos questions et vous aider à démarrer votre formation.</p>
+
+            <div class="contact-details">
+                <div>
+                    <h3>📧 E-mail</h3>
+                    <p>simonfred@gmail.com</p>
+                </div>
+                <div>
+                    <h3>📞 Téléphone</h3>
+                    <p>+237 676 108 043</p>
+                </div>
+                <div>
+                    <h3>📸 Instagram</h3>
+                    <p><a href="https://instagram.com/titredesejour976" target="_blank">@titredesejour976</a></p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <style>
+        /* Importation de la police (Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    --primary-color: #007bff; /* Bleu principal */
+    --secondary-color: #28a745; /* Vert pour CTA et succès */
+    --text-color: #333;
+    --bg-light: #f8f9fa;
+    --bg-dark: #343a40;
+}
+
+/* --- GÉNÉRAL --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #fff;
+    scroll-behavior: smooth; 
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* --- EN-TÊTE ET NAVIGATION --- */
+header {
+    background-color: var(--bg-dark);
+    color: white;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    padding: 5px 10px;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover, nav a.active {
+    color: #ffd700; /* Jaune or */
+    border-bottom: 2px solid #ffd700;
+}
+
+/* --- CONTENU PRINCIPAL --- */
+main {
+    padding-bottom: 0;
+}
+
+.content-section {
+    padding: 50px 5%;
+    /* Ajout d'une couleur d'arrière-plan alternée pour distinguer les sections */
+    background-color: var(--bg-light); 
+}
+
+#home-section {
+    /* Retirer la couleur d'arrière-plan pour la section d'accueil qui utilise une image */
+    background-color: transparent; 
+}
+
+.hero {
+    background: linear-gradient(rgba(0, 123, 255, 0.8), rgba(0, 123, 255, 0.9)), url('path/to/votre_image_conduite.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 100px 40px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.8em;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #1e7e34;
+    color: white;
+}
+
+/* --- GRILLES ET LISTES D'AVANTAGES --- */
+.advantages h2, .services-list h2, .request-form-section h2, #about-section h2, #partners-section h2, #contact-section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto 50px;
+}
+
+.advantages-grid > div {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    border-left: 5px solid var(--primary-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* --- CORRECTION : STYLE POUR LA LISTE DES VALEURS --- */
+.values-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    text-align: center;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+.values-list > div {
+    background-color: var(--primary-color); /* Utilisation du bleu principal */
+    color: white;
+    padding: 25px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.2em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.values-list > div:hover {
+    transform: translateY(-5px);
+}
+/* --- FIN CORRECTION VALEURS --- */
+
+
+/* --- PAGE SERVICES --- */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.service-option {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+
+.service-option:hover, .service-option.selected {
+    background-color: #e0f0ff;
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.service-option h3 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+/* --- FORMULAIRE --- */
+.request-form-section {
+    background-color: #fff; /* Fond blanc pour le formulaire */
+}
+
+#serviceForm {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 30px;
+    background: var(--bg-light);
+    border-radius: 10px;
+}
+/* ... [Le reste du CSS du formulaire est inchangé] ... */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#submitServiceBtn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#submitServiceBtn:hover {
+    background-color: #1e7e34;
+}
+
+.message {
+    text-align: center;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    display: none; 
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+
+/* --- PARTENAIRES (Carrousel Défilant) --- */
+.partners-carousel-container {
+    overflow: hidden; 
+    padding: 30px 0;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.partners-carousel {
+    display: flex;
+    animation: scroll-logos 30s linear infinite;
+    width: max-content; 
+}
+
+/* --- CORRECTION : LOGOS EN COULEUR --- */
+.partner-logo-img {
+    height: 60px; 
+    margin: 0 40px;
+    /* Suppression des filtres grayscale et opacity pour afficher la couleur */
+    transition: transform 0.3s; 
+}
+
+.partner-logo-img:hover {
+    transform: scale(1.1); /* Zoom léger au survol */
+}
+/* --- FIN CORRECTION LOGOS --- */
+
+
+/* Définition de l'animation de défilement */
+@keyframes scroll-logos {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%); 
+    }
+}
+
+/* --- PAGE CONTACT --- */
+.contact-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    text-align: center;
+    margin-top: 40px;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.contact-details > div {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: var(--bg-light);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.contact-details h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* --- BAS DE PAGE --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--bg-dark);
+    color: white;
+    font-size: 0.9em;
+}
+
+/* --- ANIMATIONS JS --- */
+.animate-on-load, .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-load.visible, .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- MEDIA QUERIES (Réactivité pour mobile) --- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav {
+        margin-top: 10px;
+    }
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+    #home-section {
+        padding: 60px 20px;
+    }
+    .hero h1 {
+        font-size: 2em;
+    }
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    .partner-logo-img {
+        height: 40px;
+        margin: 0 20px;
+    }
+}
+/* Ajouter à style.css si vous voulez styliser le message d'erreur */
+.message.error {
+    background-color: #f8d7da; /* Rouge clair */
+    color: #721c24; /* Rouge foncé */
+    border: 1px solid #f5c6cb;
+}
+    </style>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    // -------------------------------------------------------------------
+    // 1. Logique de la section Services (Correction des bugs)
+    // -------------------------------------------------------------------
+    const serviceForm = document.getElementById('serviceForm'); 
+    const serviceTypeDisplay = document.getElementById('serviceTypeDisplay'); 
+    const serviceTypeHidden = document.getElementById('serviceTypeHidden');
+    const formMessage = document.getElementById('formMessage');
+    const serviceOptions = document.querySelectorAll('.service-option');
+
+    // Événement pour sélectionner un service
+    serviceOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            // Désélectionner tous les autres
+            serviceOptions.forEach(opt => opt.classList.remove('selected'));
+            
+            // Sélectionner l'option cliquée
+            option.classList.add('selected');
+            
+            // Récupérer le nom du service
+            const selectedService = option.getAttribute('data-service');
+            
+            // 1. Remplir le champ visible pour l'utilisateur
+            serviceTypeDisplay.value = selectedService; 
+            
+            // 2. Remplir le champ caché qui sera envoyé par Formspree
+            serviceTypeHidden.value = selectedService; 
+
+            // Défiler jusqu'au formulaire
+            document.getElementById('serviceForm').scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+    // Événement pour la soumission du formulaire (Message de succès réintégré)
+    if (serviceForm) {
+        serviceForm.addEventListener('submit', (e) => {
+            
+            // Vérification simple (le navigateur fera le reste)
+            if (!serviceTypeDisplay.value) {
+                // Si le service n'est pas choisi, afficher une erreur rapide (optionnel)
+                formMessage.textContent = `Veuillez sélectionner un service avant d'envoyer.`;
+                formMessage.classList.remove('success');
+                formMessage.classList.add('error'); // Utilisez la classe 'error' si définie dans votre CSS
+                formMessage.style.display = 'block';
+                e.preventDefault(); 
+                return;
+            }
+            
+            // Si tout est bon, afficher le message de succès temporaire
+            formMessage.textContent = `Demande pour "${serviceTypeDisplay.value}" envoyée avec succès ! Redirection en cours...`;
+            formMessage.classList.remove('error');
+            formMessage.classList.add('success');
+            formMessage.style.display = 'block';
+
+            // Le formulaire continuera son action (envoi à Formspree) après l'affichage du message
+            // Laissez le navigateur gérer l'envoi et la redirection (e.preventDefault() est absent)
+        });
+    }
+
+    // -------------------------------------------------------------------
+    // 2. Logique des Animations et de la Navigation Active (Reste inchangée)
+    // -------------------------------------------------------------------
+
+    // Animation initiale au chargement
+    const elementsOnLoad = document.querySelectorAll('.animate-on-load');
+    elementsOnLoad.forEach(el => {
+        setTimeout(() => {
+            el.classList.add('visible');
+        }, 100); 
+    });
+
+    // Animation au défilement
+    const elementsOnScroll = document.querySelectorAll('.animate-on-scroll');
+    
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); 
+            }
+        });
+    }, {
+        threshold: 0.1 
+    });
+
+    elementsOnScroll.forEach(el => {
+        observer.observe(el);
+    });
+    
+    // Mise en évidence de la navigation active
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('nav a');
+
+    const navObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                navLinks.forEach(link => link.classList.remove('active'));
+
+                const id = entry.target.getAttribute('id');
+                const activeLink = document.querySelector(`nav a[href="#${id}"]`);
+                if(activeLink) {
+                    activeLink.classList.add('active');
+                }
+            }
+        });
+    }, {
+        rootMargin: "-40% 0px -40% 0px", 
+        threshold: 0 
+    });
+
+    sections.forEach(section => {
+        navObserver.observe(section);
+    });
+});
+    </script>
+    
+    <footer>
+        <p>&copy; 2025 La Bonne Conduite. Tous droits réservés.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+
